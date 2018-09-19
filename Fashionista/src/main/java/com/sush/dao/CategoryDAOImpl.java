@@ -24,7 +24,7 @@ public class CategoryDAOImpl implements CategoryDAO
 		{
 			System.out.println("Entering add Cat");
 			Session session = sessionFactory.getCurrentSession();
-			System.out.println("Session : "+ (session == null)+" => " + session);
+			//System.out.println("Session : "+ (session == null)+" => " + session);
 			session.save(category);
 			System.out.println("Inserted cat successfully");
 			//session.close();

@@ -14,6 +14,9 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.sush.model.Category;
+import com.sush.model.Product;
+import com.sush.model.Supplier;
+import com.sush.model.User;
 @Configuration
 @EnableTransactionManagement
 public class DBConfig
@@ -34,40 +37,40 @@ public class DBConfig
 @Bean(name="sessionFactory")
      public SessionFactory getSessionFactory()
      {
-	  System.out.println("entering sf");
+	  //System.out.println("entering sf");
      Properties hibernateProperties=new Properties();
-     System.out.println("creating properties");
+     //System.out.println("creating properties");
 	 hibernateProperties.put("hibernate.dialect","org.hibernate.dialect.H2Dialect");
 	 //hibernateProperties.setProperty("hibernate.dialect","org.hibernate.dialect.H2Dialect");
 	 hibernateProperties.setProperty("hibernate.hbm2ddl.auto","update");
-	 System.out.println("creating properties done");
-	 System.out.println("---------");
+	 //System.out.println("creating properties done");
+	 //System.out.println("---------");
 	 
-	 System.out.println("creating LocalSessionFactoryBuilder");
+	 //System.out.println("creating LocalSessionFactoryBuilder");
 	 LocalSessionFactoryBuilder localsessionFactory=new LocalSessionFactoryBuilder(getH2DataSource());
-	 System.out.println("LSFB done");
+	 //System.out.println("LSFB done");
 	 
-	 System.out.println("adding properties");
+	 //System.out.println("adding properties");
 	 localsessionFactory.addProperties(hibernateProperties);
-	 System.out.println("properties done");
+	 //System.out.println("properties done");
 	 
-	 System.out.println("adding classes");
-	 Class classes[]=new Class[] {Category.class};
+	 //System.out.println("adding classes");
+	 Class classes[]=new Class[] {Category.class,Supplier.class,Product.class,User.class};
 	 localsessionFactory.addAnnotatedClasses(classes);
-	 System.out.println("classes done");
+	 //System.out.println("classes done");
 	 
-	 System.out.println("--------------");
-	 System.out.println("building session factory");
+	 //System.out.println("--------------");
+	 //System.out.println("building session factory");
 	 SessionFactory sessionFactory=localsessionFactory.buildSessionFactory();
-	 System.out.println("SF done");
-	 System.out.println("exiting sf");
+	 //System.out.println("SF done");
+	 //System.out.println("exiting sf");
 	 return sessionFactory;
      }
 
      @Bean(name="txnmanager")
      public HibernateTransactionManager getHibernateTransactionmanager(SessionFactory sessionFactory)
      {
-    	 System.out.println("entering txn");
+    	 //System.out.println("entering txn");
     	 return new HibernateTransactionManager(sessionFactory);
     	 
      }
