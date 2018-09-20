@@ -57,7 +57,7 @@ public class ProductDAOTest {
         assertTrue("Problem in deleting the Product:",productDAO.deleteProduct(product));
     }
     
-    //@Ignore
+    @Ignore
     @Test
     public void listProductsTest()
     {
