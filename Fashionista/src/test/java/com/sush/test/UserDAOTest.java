@@ -34,7 +34,8 @@ public class UserDAOTest {
         user.setEmailId("deeksharaj19@gmail.com");
         user.setRole("Admin");
         user.setEnabled("enable");
-        assertTrue("Problem in Adding User:",userDAO.registerUser(user));
+        
+        assertTrue("Problem in Adding User:", userDAO.registerUser(user));
     }
     //@Ignore
     @Test

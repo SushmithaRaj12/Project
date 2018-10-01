@@ -23,8 +23,8 @@ public class CategoryDAOTest {
 		context.refresh();
 	    categoryDAO=(CategoryDAO)context.getBean("CategoryDAO");
 	}
-	//@Ignore
-    @Test
+	@Ignore
+   // @Test
     public void addCategoryTest()
     {
     	Category category=new Category();
@@ -34,11 +34,11 @@ public class CategoryDAOTest {
         category.setCategoryDescr("All Revlon make-up products");
         assertTrue("Problem in Adding Category:",categoryDAO.addCategory(category));
     }
-	@Ignore
+	//@Ignore
     @Test
     public void updateCategoryTest()
     {
-    	Category category=categoryDAO.getCategory(3);
+    	Category category=categoryDAO.getCategory(93);
     	category.setCategoryName("ColorBar");
         category.setCategoryDescr("All ColorBar products");
         assertTrue("Problem in updating the Category:",categoryDAO.updateCategory(category));
