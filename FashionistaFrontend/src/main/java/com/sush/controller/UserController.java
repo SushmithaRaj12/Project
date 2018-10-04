@@ -1,4 +1,5 @@
 package com.sush.controller;
+
 import java.util.Collection;
 
 import javax.servlet.http.HttpSession;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class UserController 
 {
+	
 	@RequestMapping("/login_success")
 	public String loginProcess(HttpSession session,Model m)
 	{
@@ -57,6 +59,4 @@ public class UserController
 		m.addAttribute("errorInfo","Successfully Logged Out");
 		return "Login";
 	}
-	
-	
 }
