@@ -24,7 +24,7 @@ public class CategoryController
 	{
 		return "Category";
 	}
-	@RequestMapping(value="/addCategory",method=RequestMethod.GET)
+	@RequestMapping(value="/addCategory",method=RequestMethod.POST)
 	public String addCategory(@RequestParam("categoryName")String categoryName,@RequestParam("categoryDescr")String categoryDescr,Model m)
 	
 	

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
@@ -5,7 +6,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     
     
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +28,7 @@
 				<li><a href="aboutus">About Us</a></li>
 				<li><a href="contactus">Contact Us</a></li>
 				<li><a href="category">Manage Category</a></li>
+				<li><a href="product">Manage Product</a></li>
 			
 			</ul>
 		

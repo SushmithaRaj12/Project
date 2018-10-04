@@ -13,7 +13,9 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.sush.model.CartItem;
 import com.sush.model.Category;
+import com.sush.model.OrderDetail;
 import com.sush.model.Product;
 import com.sush.model.Supplier;
 import com.sush.model.User;
@@ -55,7 +57,7 @@ public class DBConfig
 	 //System.out.println("properties done");
 	 
 	 //System.out.println("adding classes");
-	 Class classes[]=new Class[] {Category.class,Supplier.class,Product.class,User.class};
+	 Class classes[]=new Class[] {Category.class,Supplier.class,Product.class,User.class,CartItem.class,OrderDetail.class};
 	 localsessionFactory.addAnnotatedClasses(classes);
 	 //System.out.println("classes done");
 	 
