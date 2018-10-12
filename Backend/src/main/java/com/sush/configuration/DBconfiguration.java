@@ -28,7 +28,8 @@ import com.sush.model.User;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.sush")
-public class DBconfiguration {
+public class DBconfiguration
+{
 
 	@Bean(name="dataSource")
 	public DataSource dataSource() {
